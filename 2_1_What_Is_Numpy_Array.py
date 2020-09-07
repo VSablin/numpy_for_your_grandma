@@ -1,5 +1,5 @@
 # In this script, we go through lesson 2.1 of Python NumPy for your
-# Granmpa course: What's A NumPy Array. Web link here:
+# Grandma course: What's A NumPy Array. Web link here:
 # https://www.gormanalysis.com/blog/python-numpy-for-your-grandma-whats-a-numpy-array/
 
 # %% Import libraries

@@ -1,5 +1,5 @@
 # In this script, we go through lesson 2.2 of Python NumPy for your
-# Granmpa course: Creating Numpy Arrays. Web link here:
+# Grandma course: Creating Numpy Arrays. Web link here:
 # https://www.gormanalysis.com/blog/python-numpy-for-your-grandma-creating-numpy-arrays/
 
 # %% Import libraries
