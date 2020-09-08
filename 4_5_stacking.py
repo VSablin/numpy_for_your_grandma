@@ -55,22 +55,18 @@ np.hstack((bingo, bongo))
 # The first argument of stack is a sequence of arrays as a tuple. The second is
 # axis, the new axis to insert and combine the arrays along. It does the
 # following:
-# 1) If every array in the sequence is 1D, concatenate arrays along axis 0.
-# 2) else, if every array has the same shape excluding axis 1, concatenate
-# along axis 1.
+# 1) If every array in the sequence the same shape and axis<= dimensionality
+# of arrays, then, for each array, insert a new axis where specified and
+# 2) concatenate arrays along new axis.
 # 3) Otherwise, throw an error.
 # Let's see some examples:
 foo = np.array(['a', 'b'])
 bar = np.array(['c', 'd'])
-baz = np.array([['e', 'f']])
-bingo = np.array([['g', 'h', 'i']])
-bongo = np.array([['j', 'k'],
-                 ['l', 'm']])
-# We can hstack foo and bar:
-np.hstack((foo, bar))
-# We can hstack baz and bingo:
-np.hstack((baz, bingo))
-# But we cannot hstack foo and bingo:
-np.hstack((foo, bingo))
-# We cannot hstack bingo and bongo:
-np.hstack((bingo, bongo))
+# We can stack foo and bar along axis 0:
+np.stack((foo, bar), axis=0)
+# We can stack foo and bar along axis 1:
+np.stack((foo, bar), axis=1)
+# But we cannot stack foo and bar along axis 2:
+np.stack((foo, bar), axis=2)
+# Negative indexing is allowed for axis:
+np.stack((foo, bar), axis=-1)
